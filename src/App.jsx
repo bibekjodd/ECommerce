@@ -1,11 +1,29 @@
 import React from 'react'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import About from './pages/About'
+import Cart from './pages/Cart'
+import Contact from './pages/Contact'
+import ErrorPage from './pages/ErrorPage'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import SingleProduct from './pages/SingleProduct'
 
-export default function App() {
+function App() {
   return (
-    <div className='w-full flex flex-col items-center text-lg min-h-screen'>
-      <h1 className='w-full text-xl text-white bg-purple-400 text-center'>Hello world</h1>
-
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/singleproduct/:id' element={<SingleProduct />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/*' element={<ErrorPage />} />
+      </Routes>
+    </>
   )
 }
+
+export default App
