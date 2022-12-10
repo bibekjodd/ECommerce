@@ -8,7 +8,7 @@ import { GiConcentricCrescents } from 'react-icons/gi'
 
 function Trusted() {
     return (
-        <section className='bg-gray-100 px-4 py-7'>
+        <section className='bg-gray-100/50 px-4 py-7'>
             <div className='text-center mb-3'>
                 Trusted By 1000+ Companies
             </div>

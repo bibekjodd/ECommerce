@@ -11,27 +11,27 @@ function Header() {
 
 
     return (
-        <header className='sticky z-50 flex select-none  items-center justify-between px-4 sm:px-5 py-3 lg:px-10  bg-white/40 filter backdrop-blur-2xl  top-0 left-0 shadow-sm shadow-gray-200/50'>
-            <Link
-                onClick={() => {
-                    setMobileNav(false);
-                }}
-                to='/'
-                className='text-2xl text-transparent bg-clip-text bg-gradient-to-br from-fuchsia-400 to-sky-400 font-semibold'
-            >
-                JODD STORE
-            </Link>
+            <header className='sticky z-50 top-0 left-0 flex select-none  items-center  justify-between px-4 sm:px-5 py-3 lg:px-10  bg-white/10 filter backdrop-blur-3xl   shadow-sm shadow-gray-200/50'>
+                <Link
+                    onClick={() => {
+                        setMobileNav(false);
+                    }}
+                    to='/'
+                    className='text-2xl text-transparent bg-clip-text bg-gradient-to-br from-fuchsia-400 to-sky-400 font-semibold'
+                >
+                    JODD STORE
+                </Link>
 
-            <div>
-                <button
-                    onClick={() => { setMobileNav(true) }}
-                    className='md:hidden'>
-                    <AiOutlineMenu className='text-2xl ' />
-                </button>
-                <Nav mobileNav={mobileNav} setMobileNav={setMobileNav} />
-            </div>
+                <div>
+                    <button
+                        onClick={() => { setMobileNav(true) }}
+                        className='md:hidden'>
+                        <AiOutlineMenu className='text-2xl ' />
+                    </button>
+                    <Nav mobileNav={mobileNav} setMobileNav={setMobileNav} />
+                </div>
 
-        </header>
+            </header>
     )
 }
 
