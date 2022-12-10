@@ -20,7 +20,9 @@ function HeroSection({ data }) {
 
 
                 <section className='relative z-10 md:m-5 -order-1 md:order-1'>
-                    <img src="/images/hero.jpg" alt=""
+                    <img
+                    loading='lazy'
+                     src="/images/hero.jpg" alt=""
                         className='rounded-sm z-30' />
 
                     {/* animation */}

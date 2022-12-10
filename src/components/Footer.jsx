@@ -9,7 +9,7 @@ function Footer() {
 
                 <div className='max-w-screen-xl mx-auto px-4'>
                     {/* get started */}
-                    <section className='flex justify-between items-center bg-neutral-100 px-7 sm:px-10 py-5 rounded-md -translate-y-1/2'>
+                    <section className='flex justify-between items-center bg-gray-50 px-7 sm:px-10 py-5 rounded-md -translate-y-1/2'>
                         <h5 className='text-black '>
                             Ready to get started?<br />
                             Talk to us today
@@ -49,21 +49,21 @@ function Footer() {
                             <p>Follow Us</p>
                             <div className='flex items-center text-2xl space-x-3'>
                                 <a
-                                    href=""
+                                    href="https://www.facebook.com/bibekbhattaraionline"
                                     target="blank"
                                     rel='noopener noreferrer'
                                 >
                                     <FaFacebook />
                                 </a>
                                 <a
-                                    href=""
+                                    href="https://www.instagram.com/bibek.js/"
                                     target="blank"
                                     rel='noopener noreferrer'
                                 >
                                     <FaInstagram />
                                 </a>
                                 <a
-                                    href=""
+                                    href="https://github.com/bibekjodd"
                                     target="blank"
                                     rel='noopener noreferrer'
                                 >
