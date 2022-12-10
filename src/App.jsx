@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import About from './pages/About'
 import Cart from './pages/Cart'
@@ -11,7 +12,7 @@ import SingleProduct from './pages/SingleProduct'
 
 function App() {
   return (
-    <>
+    <div className='min-h-screen flex flex-col'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -22,7 +23,8 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/*' element={<ErrorPage />} />
       </Routes>
-    </>
+      <Footer />
+    </div>
   )
 }
 
