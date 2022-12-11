@@ -11,21 +11,21 @@ import Products from './pages/Products'
 import SingleProduct from './pages/SingleProduct'
 
 function App() {
-  return (
-    <div className='min-h-screen flex flex-col'>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/singleproduct/:id' element={<SingleProduct />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/*' element={<ErrorPage />} />
-      </Routes>
-      <Footer />
-    </div>
-  )
+    return (
+        <div className='min-h-screen flex flex-col'>
+            <Header />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/products' element={<Products />} />
+                <Route path='/singleproduct/:id' element={<SingleProduct />} />
+                <Route path='/cart' element={<Cart />} />
+                <Route path='/*' element={<ErrorPage />} />
+            </Routes>
+            <Footer />
+        </div>
+    )
 }
 
 export default App
