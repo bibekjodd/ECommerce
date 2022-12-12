@@ -26,7 +26,7 @@ function Contact() {
           className='outline-none border-2 border-neutral-200 px-2 py-1 rounded-md focus:border-sky-500'
         />
 
-        <textarea name="message" id="message" cols="30" rows="5" required
+        <textarea name="message" id="message" cols="30" rows="5" required placeholder='Message'
           className='outline-none border-2 border-neutral-200 px-2 py-1 rounded-md focus:border-sky-500'
         ></textarea>
         <button className='self-end btn px-7'>Send</button>
