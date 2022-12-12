@@ -82,7 +82,7 @@ function Footer() {
                     </section>
 
                     <section className='mx-auto w-full max-w-screen-lg grid grid-cols-2 place-items-center mt-7  p-4 space-x-7 '>
-                        <p className='w-full text-left'>@2022 bibekjodd All Rights Reserved</p>
+                        <p className='w-full text-left'>&copy;2022 @bibekjodd All Rights Reserved</p>
                         <div className='flex flex-col space-y-2'>
                             <Link to='/'
                                 className='underline'
