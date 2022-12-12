@@ -12,7 +12,7 @@ import SingleProduct from './pages/SingleProduct'
 
 function App() {
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div className='min-h-screen flex flex-col '>
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />

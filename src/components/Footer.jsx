@@ -14,7 +14,7 @@ function Footer() {
                             Ready to get started?<br />
                             Talk to us today
                         </h5>
-                        <button className='bg-sky-500 px-3 py-2 rounded-md shadow-lg shadow-sky-300 hover:brightness-110'>
+                        <button className='btn'>
                             Get Started
                         </button>
                     </section>

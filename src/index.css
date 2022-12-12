@@ -10,7 +10,7 @@
     }
 }
 
-@layer utilities {
+@layer components {
     .animation-delay-2000 {
         animation-delay: 2s;
     }
@@ -22,10 +22,26 @@
     .animation-delay-6000 {
         animation-delay: 6s;
     }
+    .btn{
+        @apply bg-sky-500 text-white px-3 py-2 rounded-md hover:brightness-110 shadow-lg shadow-sky-200
+    }
 }
 
 
 #root {
     max-width: 1700px;
     margin: auto;
+}
+
+.reveal {
+    animation: reveal 200ms ease-out;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function HeroSection({ data }) {
     return (
@@ -13,16 +14,16 @@ function HeroSection({ data }) {
                     <p className='text-gray-500 my-3 '>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis est rem beatae dolor a repudiandae enim et, quisquam sequi nisi, ab vel illo consectetur. Eius itaque odit dicta placeat veniam!
                     </p>
-                    <button className='bg-sky-400 shadow-xl shadow-sky-200  text-white  px-3 py-2 rounded-md'>
+                    <Link to='/products' className='btn'>
                         SHOW NOW
-                    </button>
+                    </Link>
                 </section>
 
 
                 <section className='relative z-10 md:m-5 -order-1 md:order-1'>
                     <img
-                    loading='lazy'
-                     src="/images/hero.jpg" alt=""
+                        loading='lazy'
+                        src="/images/hero.jpg" alt=""
                         className='rounded-sm z-30' />
 
                     {/* animation */}

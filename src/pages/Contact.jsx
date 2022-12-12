@@ -29,7 +29,7 @@ function Contact() {
         <textarea name="message" id="message" cols="30" rows="5" required
           className='outline-none border-2 border-neutral-200 px-2 py-1 rounded-md focus:border-sky-500'
         ></textarea>
-        <button className='self-end bg-sky-500 text-white px-5 py-1.5 rounded-md shadow-lg shadow-sky-300 hover:brightness-105'>Send</button>
+        <button className='self-end btn px-7'>Send</button>
 
       </form>
 

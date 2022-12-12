@@ -52,9 +52,10 @@ function FilterProducts() {
             ...state,
             filteredProducts: products
         })
-        setColor('all')
-        setCategory('all')
-        setCompany('all')
+        setColor('all');
+        setCategory('all');
+        setCompany('all');
+        setPrice(0);
     }
 
     return (
@@ -130,6 +131,7 @@ function FilterProducts() {
                     min='0' max={maxPrice / 100}
                     type="range" name="" id=""
                     className='accent-sky-500 h-1  outline-none border-none '
+                    value={price}
                     onChange={(e) => {
                         setPrice(Number(e.target.value))
                     }}

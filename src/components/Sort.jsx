@@ -37,7 +37,7 @@ function Sort({ setGridView, gridView }) {
 
 
    return (
-      <div className='flex items-center justify-between px-7'>
+      <div className='flex items-center justify-between px-2 md:px-6 lg:px-8'>
 
 
          <div className='flex space-x-3'>
@@ -70,7 +70,7 @@ function Sort({ setGridView, gridView }) {
 
             <option value="lowest"
                className='p-1.5'
-            >Name (lowest)</option>
+            >Price (lowest)</option>
 
             <option value="a-z"
                className='p-1.5'

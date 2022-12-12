@@ -58,7 +58,7 @@ function SingleProduct() {
                             <Link to='/'>Home</Link>
                             <span>/</span>
                             <Link to={`/singleproduct/${id}`}
-                                className='text-sky-700'
+                                className='text-sky-500'
                             >
                                 {id}
                             </Link>
@@ -69,7 +69,7 @@ function SingleProduct() {
                             {/* details  */}
                             <section className='space-y-5 px-4'>
 
-                                <h1 className='text-2xl'>
+                                <h1 className='text-2xl capitalize'>
                                     {state.product?.name}
                                 </h1>
 
@@ -83,7 +83,7 @@ function SingleProduct() {
                                 <div className='font-medium'>
                                     MRP:
                                     <del>
-                                        <FormatPrice price={state.product?.price + 420 * 100} />
+                                        <FormatPrice price={state.product?.price * 1.2345} />
                                     </del>
                                 </div>
 
@@ -128,14 +128,14 @@ function SingleProduct() {
                                     ID: {state.product?.id}
                                 </p>
 
-                                <p>
+                                <p className='capitalize'>
                                     Brand:  {state.product?.company}
                                 </p>
 
                                 <div className='w-full h-0.5 bg-gray-500 rounded-full' />
 
 
-                                
+
 
                                 {state.product.stock > 0 && <AddToCart product={state.product} />}
 
