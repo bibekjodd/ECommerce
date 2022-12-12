@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useProductContext } from '../context/productContext';
 import { TiTick } from 'react-icons/ti'
+import FormatPrice from './FormatPrice';
 
 
 function FilterProducts() {
@@ -8,8 +9,9 @@ function FilterProducts() {
     const [company, setCompany] = useState('all');
     const [color, setColor] = useState('all');
     const [search, setSearch] = useState('');
+    const [price, setPrice] = useState(0);
 
-    const { companies, colors, categories, setState, state, products } = useProductContext();
+    const { companies, colors, categories, setState, state, products, maxPrice } = useProductContext();
     useEffect(() => {
         // console.log(categories)
         let filteredProducts = products
@@ -35,16 +37,25 @@ function FilterProducts() {
             filteredProducts = filteredProducts.filter(product => product.colors.includes(color))
         }
 
+        filteredProducts = filteredProducts.filter(product => product.price / 100 >= price)
+
         setState({
             ...state,
             filteredProducts
         })
 
-    }, [category, company, search, color])
+    }, [category, company, search, color, price])
 
-    // const [categories, setCategories] = useState([
-    //     'all', 'mobile', 'laptop', 'computer', 'accessories', 'watch'
-    // ])
+
+    const clearAllFilters = () => {
+        setState({
+            ...state,
+            filteredProducts: products
+        })
+        setColor('all')
+        setCategory('all')
+        setCompany('all')
+    }
 
     return (
         <section className='w-64 hidden md:flex flex-col text-gray-900 space-y-10'>
@@ -72,20 +83,22 @@ function FilterProducts() {
 
 
             {/* brand */}
-            <h3>Brands</h3>
-            <select
-                onChange={(e) => {
-                    setCompany(e.target.value)
-                }}
-                className='p-1 ring-1 ring-gray-300 rounded-sm text-gray-600 outline-none'
-                name="" id="">
-                {companies.map((company, i) => (
-                    <option
-                        key={i}
-                        value={company}>{company.charAt(0).toUpperCase() + company.slice(1)}</option>
-                ))}
+            <div className='space-y-3'>
+                <h3>Brands</h3>
+                <select
+                    onChange={(e) => {
+                        setCompany(e.target.value)
+                    }}
+                    className='p-1 ring-1 ring-gray-300 rounded-sm text-gray-600 outline-none'
+                    name="" id="">
+                    {companies.map((company, i) => (
+                        <option
+                            key={i}
+                            value={company}>{company.charAt(0).toUpperCase() + company.slice(1)}</option>
+                    ))}
 
-            </select>
+                </select>
+            </div>
 
             {colors && <div className='flex items-center space-x-2 flex-wrap'>
                 {colors.map((productColor, i) => (
@@ -104,16 +117,27 @@ function FilterProducts() {
                 ))}
             </div>}
 
+            {/* filter price */}
+            {maxPrice && <div className='space-y-3'>
+                <div className='flex items-center text-sm'>
+                    <h5 className='mr-1'>Price </h5>
+                    {price > 0 && <>
+                        &gt;  <FormatPrice price={(price * 100) - 1} />
+                    </>
+                    }
+                </div>
+                <input
+                    min='0' max={maxPrice / 100}
+                    type="range" name="" id=""
+                    className='accent-sky-500 h-1  outline-none border-none '
+                    onChange={(e) => {
+                        setPrice(Number(e.target.value))
+                    }}
+                />
+            </div>}
+
             <button
-                onClick={() => {
-                    setState({
-                        ...state,
-                        filteredProducts: products
-                    })
-                    setColor('all')
-                    setCategory('all')
-                    setCompany('all')
-                }}
+                onClick={clearAllFilters}
                 className='self-start text-white bg-rose-500 p-2 rounded-md'>
                 Clear All Filters
             </button>

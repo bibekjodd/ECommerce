@@ -10,7 +10,8 @@ const initialState = {
     featuredProducts: [],
     filteredProducts: [],
     companies: [],
-    categories: []
+    categories: [],
+    maxPrice: 0,
 }
 
 const AppProvider = ({ children }) => {
@@ -42,6 +43,11 @@ const AppProvider = ({ children }) => {
             }
             colors.unshift('all')
             colors = colors.filter((self, index) => colors.indexOf(self) === index)
+
+            let maxPrice = 0;
+            for (let product of products)
+                maxPrice = Math.max(maxPrice, product.price)
+                // console.log(maxPrice)
             setState({
                 ...state,
                 isLoading: false,
@@ -52,7 +58,9 @@ const AppProvider = ({ children }) => {
                 companies,
                 categories,
                 colors,
+                maxPrice,
             })
+
         } catch (error) {
             setState({
                 ...state,
