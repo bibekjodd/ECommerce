@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagram, FaGithub, FaFacebook } from 'react-icons/fa'
+import { FaInstagram, FaGithub, FaFacebook,FaSlackHash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 function Footer() {
@@ -23,8 +23,11 @@ function Footer() {
                     <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
                         {/* title  */}
                         <div className='mx-5 my-5'>
-                            <h6 className='mb-3'>
-                                Bibek Jodd
+                            <h6 className='mb-3 flex items-center space-x-2'>
+                                <FaSlackHash className='text-3xl' />
+                                <span>
+                                    Bibek Jodd
+                                </span>
                             </h6>
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti.

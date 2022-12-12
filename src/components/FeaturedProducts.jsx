@@ -30,7 +30,7 @@ function FeaturedProducts() {
                                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
                                     {featuredProducts.map(({ id, name, image, price, category }) => (
                                         <Product
-                                        gridView={true}
+                                            gridView={true}
                                             key={id}
                                             id={id}
                                             name={name}
