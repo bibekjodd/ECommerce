@@ -22,7 +22,6 @@ function AddToCart({ product }) {
 				quantity,
 			})
 			localStorage.setItem('cartItems', JSON.stringify(cartItems))
-			console.log('pushed a new item')
 			return
 		}
 
@@ -36,7 +35,6 @@ function AddToCart({ product }) {
 		}
 		localStorage.setItem('cartItems', JSON.stringify(cartItems))
 
-		console.log('updated item')
 
 	}
 

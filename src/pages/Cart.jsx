@@ -14,7 +14,7 @@ function Cart() {
 
   let total = 0;
   for (let product of products)
-    total += product.price;
+    total += product.price * product.quantity;
 
 
   return (

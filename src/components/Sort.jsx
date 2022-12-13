@@ -7,7 +7,7 @@ function Sort({ setGridView, gridView }) {
    const { state, filteredProducts, setState } = useProductContext();
 
    const sortProducts = (e) => {
-      const value = e.target.value;
+      console.log(value)
       let tempProducts = filteredProducts
       tempProducts = tempProducts.sort((a, b) => {
          if (value === 'lowest') {
