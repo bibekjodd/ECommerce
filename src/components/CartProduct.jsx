@@ -13,7 +13,7 @@ function CartProduct({ product, setProducts }) {
         <div className='sm:mx-2 md:mx-3 my-4 ring-1 ring-gray-200 ring-inset rounded-md hover:brightness-105'>
             <div className='group grid relative'>
                 <img src={image} alt=""
-                    className='rounded-sm'
+                    className='rounded-sm w-full aspect-video object-cover'
                 />
                 <div className='absolute backdrop-blur-sm inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-all duration-200'>
                     <button
